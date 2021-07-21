@@ -2,7 +2,7 @@ import React from 'react'
 import ItemCount from '../ItemCount'
 
 const handleCount=(cant)=>{
-    console.log({cant});
+    console.log(cant);
 }
 
 function ItemListContainer(props) {

@@ -13,9 +13,6 @@ function ItemCount({initial, stock, onAdd}) {
         }
     }
 
-    const handleOnAdd = ()=>{
-        onAdd(cantidad)
-    }
     return (
         <>
             <div className="card text-center w-50">
@@ -26,7 +23,7 @@ function ItemCount({initial, stock, onAdd}) {
                     <button className="btn btn-outline-primary" onClick={handleRemove}>-</button>
                     <label>{cantidad}</label>
                     <button className="btn btn-outline-primary" onClick={handleAdd}>+</button><br/>
-                    <button className="btn btn-primary mt-2" onClick={handleOnAdd}>Agregar al carrito</button>
+                    <button className="btn btn-primary mt-2" onClick={e=>onAdd(cantidad)}>Agregar al carrito</button>
                 </div>
             </div>
         </>
