@@ -18,11 +18,6 @@ function handleContador(){
     <div className="body">
       <NavBar/>
       <ItemListContainer greeting="Conoce Nuestros Productos" user="Actividad"/>
-      <ItemCount/>
-      {contador}<br/>
-      <button className="btn btn-success">+</button>
-      <button  onClick={handleContador}>Click</button>
-      <button className="btn btn-success">-</button>
     </div>
 
   );

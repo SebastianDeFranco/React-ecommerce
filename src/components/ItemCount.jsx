@@ -22,7 +22,7 @@ function ItemCount({initial, stock, onAdd}) {
                     <button className="btn btn-outline-primary" onClick={handleRemove}>-</button>
                     <label>{cantidad}</label>
                     <button className="btn btn-outline-primary" onClick={handleAdd}>+</button><br/>
-                    <button className="btn btn-primary mt-2" onClick={()=>onAdd(0)}>Agregar al carrito</button>
+                    <button className="btn btn-primary mt-2" onClick={()=>onAdd()}>Agregar al carrito</button>
                 </div>
             </div>
         </>
