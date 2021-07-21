@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import {useState} from 'react';
 import ItemListContainer from './components/shop/ItemListContainer';
 import './components/shop/ItemListContainer.css'
+import ItemCount from './components/ItemCount';
 
 
 function App() {
@@ -14,11 +15,14 @@ function handleContador(){
   setContador(contador + 1)
 }
   return (
-    <div>
+    <div className="body">
       <NavBar/>
-      <ItemListContainer greeting="Mi Tienda" user="Sebastian"/>
+      <ItemListContainer greeting="Conoce Nuestros Productos" user="Actividad"/>
+      <ItemCount/>
       {contador}<br/>
-      <button onClick={handleContador}>Click</button>
+      <button className="btn btn-success">+</button>
+      <button  onClick={handleContador}>Click</button>
+      <button className="btn btn-success">-</button>
     </div>
 
   );
