@@ -50,13 +50,13 @@ function ItemList() {
             reject(console.log('Error'));
         },3000);
     });
-    export const getItems = () =>{
+    const getItems = () =>{
         return promise
     }
     
         return (
             <div>
-                {Comics.map(item=>it)}
+                {Comics.map(item=><div>{}</div>)}
             </div>
         )
     }
