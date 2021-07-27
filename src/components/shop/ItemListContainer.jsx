@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import ItemCount from '../ItemCount'
 import ItemList from '../ItemList'
-import getItems from '../ItemList'
+// import getItems from '../ItemList'
 
 
 const handleCount=(cant)=>{
@@ -11,22 +11,22 @@ const handleCount=(cant)=>{
 
 
 function ItemListContainer() {
-const [Comics, setComics] = useState([])
-useEffect(() => {
-    getItems()
-    .then((result)=>{
-        setComics(result)
-        console.log("Cargo cards 2 seg");
-    })
-    .catch((err)=>{
-        console.log(err);
-    })
-}, [])
+// const [Comics, setComics] = useState([])
+// useEffect(() => {
+//     getList()
+//     .then((result)=>{
+//         setComics(result)
+//         console.log("Cargo cards 2 seg");
+//     })
+//     .catch((err)=>{
+//         console.log(err);
+//     })
+// }, [])
 
     return (
         <div>
+        <ItemList/>
         <ItemCount stock={5} initial={1} onAdd={handleCount} />
-        <ItemList comic={Comics}/>
         </div>
     )
 }

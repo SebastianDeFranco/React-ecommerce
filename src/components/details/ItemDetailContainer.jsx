@@ -1,21 +1,20 @@
-import React from 'react'
-import { useState, useEffect} from 'react'
-import ItemDetail from './ItemDetail'
+import React from 'react';
+import { useState, useEffect} from 'react';
+import ItemDetail from './ItemDetail';
+import {getItem} from './getMocks';
 
 function ItemDetailContainer() {
-const [state, setstate] = useState()
+const [item, setItem] = useState({})
 useEffect(() => {
-    effect
-    return () => {
-        cleanup
-    }
-}, [input])
+    getItem()
+    .then(resp => setItem(resp))
+}, [])
 
-
+    console.log(item)
     return (
-        <div>
-            
-        </div>
+        <>
+            <ItemDetail item={item}/>
+        </>
     )
 }
 

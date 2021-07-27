@@ -5,6 +5,7 @@ import {useState} from 'react';
 import ItemListContainer from './components/shop/ItemListContainer';
 import './components/shop/ItemListContainer.css'
 import ItemCount from './components/ItemCount';
+import ItemDetailContainer from './components/details/ItemDetailContainer';
 
 
 function App() {
@@ -18,6 +19,7 @@ function handleContador(){
     <div className="body">
       <NavBar/>
       <ItemListContainer greeting="Conoce Nuestros Productos" user="Actividad"/>
+      <ItemDetailContainer/>
     </div>
 
   );

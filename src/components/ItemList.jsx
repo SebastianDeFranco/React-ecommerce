@@ -50,7 +50,7 @@ function ItemList() {
             reject(console.log('Error'));
         },3000);
     });
-    const getItems = () =>{
+    const getList = () =>{
         return promise
     }
     
