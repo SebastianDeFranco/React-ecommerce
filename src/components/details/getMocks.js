@@ -4,7 +4,7 @@ const Comics =
             id:1,
             nombre:"Captain America",
             precio:10000,
-            picUrl:""
+            picUrl:"/assets/img/capitan-america.jpg"
         }
         
 
