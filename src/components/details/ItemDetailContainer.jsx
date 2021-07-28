@@ -2,6 +2,11 @@ import React from 'react';
 import { useState, useEffect} from 'react';
 import ItemDetail from './ItemDetail';
 import {getItem} from './getMocks';
+import ItemCount from '../ItemCount';
+
+const handleCount=(cant)=>{
+    console.log(cant);
+}
 
 function ItemDetailContainer() {
 const [item, setItem] = useState({})
@@ -14,6 +19,7 @@ useEffect(() => {
     return (
         <>
             <ItemDetail item={item}/>
+            <ItemCount stock={5} initial={1} onAdd={handleCount}/>
         </>
     )
 }

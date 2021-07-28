@@ -1,7 +1,10 @@
 import React from "react"
+import {useState} from 'react'
 
+function ItemDetail({item}) {
+    const [detalle, setDetalle] = useState(false)
 
-function ItemDetail({item={}}) {
+    
     return(
         <div>
             <h2>Detalle</h2>

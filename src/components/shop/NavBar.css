@@ -10,3 +10,15 @@
     font-family: 'Caveat', cursive;
     font-size: 20px;
 }
+
+.link-nav{
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.link-nav:hover{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.705);
+}

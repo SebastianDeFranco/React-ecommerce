@@ -1,32 +1,37 @@
 import {useState, useEffect} from 'react'
 import ItemCount from '../ItemCount'
 import ItemList from '../ItemList'
+import {useParams} from 'react-router-dom'
+import {getItem} from '../details/getMocks';
+
+
 // import getItems from '../ItemList'
 
 
-const handleCount=(cant)=>{
-    console.log(cant);
-}
 
 
 
 function ItemListContainer() {
-// const [Comics, setComics] = useState([])
-// useEffect(() => {
-//     getList()
-//     .then((result)=>{
-//         setComics(result)
-//         console.log("Cargo cards 2 seg");
-//     })
-//     .catch((err)=>{
-//         console.log(err);
-//     })
-// }, [])
+    const [items, setItems] = useState([])
+    const { categoryId } = useParams()
 
+    useEffect(() => {
+        
+        if(categoryId === undefined){
+            getItem()
+            .then(resp => setItems)
+        }else{
+            getItem()
+            .then(resp => setItems(resp.filter(it => it.categoria === categoryId)))
+        }
+        
+    }, [])
+
+    console.log(categoryId);
     return (
         <div>
-        <ItemList/>
-        <ItemCount stock={5} initial={1} onAdd={handleCount} />
+        <h1 className="titulo-principal">Comics</h1>
+        <ItemList item={items}/>
         </div>
     )
 }

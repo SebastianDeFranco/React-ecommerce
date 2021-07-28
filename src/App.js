@@ -6,6 +6,7 @@ import ItemListContainer from './components/shop/ItemListContainer';
 import './components/shop/ItemListContainer.css'
 import ItemCount from './components/ItemCount';
 import ItemDetailContainer from './components/details/ItemDetailContainer';
+import {BrowserRouter as Router, Switch, Route, useParams} from 'react-router-dom';
 
 
 function App() {
@@ -16,12 +17,20 @@ function handleContador(){
   setContador(contador + 1)
 }
   return (
-    <div className="body">
+    <Router>
+      <div className="body">
       <NavBar/>
-      <ItemListContainer greeting="Conoce Nuestros Productos" user="Actividad"/>
-      <ItemDetailContainer/>
-    </div>
-
+        <Switch>
+          <Route exact path='/detail' components={ItemDetailContainer} />
+          <Route exact path="/">
+          <ItemListContainer greeting="Conoce Nuestros Productos" user="Actividad"/>
+          </Route>
+          <Route exact path="/category/: categoryId">
+          <ItemListContainer greeting="Conoce Nuestros Productos" user="Actividad"/>
+          </Route>
+          </Switch>
+      </div>
+    </Router>
   );
 }
 
