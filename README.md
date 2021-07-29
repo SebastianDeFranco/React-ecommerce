@@ -1,3 +1,15 @@
+Tienda Comic
+
+Tienda Comic es un e-commerce para la venta de comics de Marvel y DC.
+
+Cuenta con: 
+
+Filtro por categoria
+Carrito 
+Vista de Detalle
+
+Para el estilo se utilizo Bootstrap 4.6.0
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

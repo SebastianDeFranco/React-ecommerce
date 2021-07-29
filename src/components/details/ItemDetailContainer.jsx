@@ -14,6 +14,9 @@ const [item, setItem] = useState({})
 const {id} = useParams()
 useEffect(() => {
     getItem()
+    setTimeout(()=>{
+        
+    })
     .then(resp => setItem(resp))
 }, [id]);
 
