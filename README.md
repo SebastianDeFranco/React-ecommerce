@@ -9,6 +9,7 @@ Carrito
 Vista de Detalle
 
 Para el estilo se utilizo Bootstrap 4.6.0
+Uso de React Router Dom para la navegación
 
 # Getting Started with Create React App
 
