@@ -3,6 +3,7 @@ import { useState, useEffect} from 'react';
 import ItemDetail from './ItemDetail';
 import {getItem} from './getMocks';
 import ItemCount from '../ItemCount';
+import { useParams } from 'react-router-dom';
 
 const handleCount=(cant)=>{
     console.log(cant);
@@ -10,15 +11,16 @@ const handleCount=(cant)=>{
 
 function ItemDetailContainer() {
 const [item, setItem] = useState({})
+const {id} = useParams()
 useEffect(() => {
     getItem()
     .then(resp => setItem(resp))
-}, [])
+}, [id]);
 
     console.log(item)
     return (
         <>
-            <ItemDetail item={item}/>
+            {item.map(elemento => <ItemDetail nombre={elemento.title} img={elemento.picUrl} precio={elemento.price}  />)}
             <ItemCount stock={5} initial={1} onAdd={handleCount}/>
         </>
     )

@@ -21,7 +21,7 @@ function handleContador(){
       <div className="body">
       <NavBar/>
         <Switch>
-          <Route exact path='/detail' components={ItemDetailContainer} />
+          <Route exact path={'/detail/:id'} components={ItemDetailContainer} />
           <Route exact path="/">
           <ItemListContainer greeting="Conoce Nuestros Productos" user="Actividad"/>
           </Route>

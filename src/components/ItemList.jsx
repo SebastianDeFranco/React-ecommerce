@@ -2,46 +2,47 @@ import {useState,useEffect} from 'react'
 import Item from './Item'
 import React from 'react';
 import {Card, Button} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
 const Comics = [
     {
-        id:1,
+        id:'1',
         title:"Capitan America",
         price:10000,
         categoria:"Marvel",
         picUrl:"/assets/img/capitan-america.jpg"
     },
     {
-        id:2,
+        id:'2',
         title:"Spiderman Simbionte",
         price:10000,
         categoria:"Marvel",
         picUrl:"/assets/img/spiderman-simbionte.jpg"
     },
     {
-        id:3,
+        id:'3',
         title:"Spiderman y Venom",
         price:10000,
         categoria:"Marvel",
         picUrl:"/assets/img/spiderman-venom.jpg"
     },
     {
-        id:4,
-        title:"Comic 4",
+        id:'4',
+        title:"Batman",
         price:10000,
         categoria:"DC",
         picUrl:"/assets/img/batman.jpg"
     },
     {
-        id:5,
-        title:"Comic 5",
+        id:'5',
+        title:"Flash",
         price:10000,
         categoria:"DC",
         picUrl:"/assets/img/flash.jpg"
     },
     {
-        id:6,
-        title:"Comic 6",
+        id:'6',
+        title:"Flash",
         price:10000,
         categoria:"DC",
         picUrl:"/assets/img/flash-2.jpg"
@@ -71,7 +72,7 @@ function ItemList() {
             <Card.Img src={item.picUrl}/>
             <Card.Body className="d-flex justify-content-between flex-column">
                 <Card.Title>
-                    <h4>{item.Title}</h4>
+                    <h4>{item.title}</h4>
                 </Card.Title>
                 <Card.Text>
                     <p>${item.price}</p>

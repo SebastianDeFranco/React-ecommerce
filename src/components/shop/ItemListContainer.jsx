@@ -13,11 +13,10 @@ import {getList } from '../ItemList'
 
 
 function ItemListContainer() {
-    const [items, setItems] = useState([])
+    const [item, setItems] = useState()
     const { categoryId } = useParams()
 
-    useEffect(() => {
-        
+    useEffect((item) => {
         if(categoryId === undefined){
             getList()
             .then(resp => setItems(resp.filter(it => it.categoria === categoryId)))
@@ -29,7 +28,7 @@ function ItemListContainer() {
     return (
         <div>
         <h1 className="titulo-principal">Comics</h1>
-        <ItemList item={items}/>
+        <ItemList/>
         </div>
     )
 }

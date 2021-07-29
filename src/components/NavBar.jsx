@@ -13,12 +13,12 @@ function NavBar() {
     return (
         <div>
         <Navbar bg="light" variant="light" className="navbar">
-        <NavLink to="/" className="logo"><img src="/assets/img/tienda-comic.png" width="90px"/></NavLink>
+        <Link to="/" className="logo"><img src="/assets/img/tienda-comic.png" width="90px"/></Link>
             <Nav className="mr-auto">
-            <NavLink to="/" className="link-nav">Comics</NavLink>
-            <NavLink to="/category/Marvel" className="link-nav">Marvel</NavLink>
-            <NavLink to="/category/DC" className="link-nav">DC</NavLink>
-            <Nav.Link href="#pricin"><CartWidget/></Nav.Link>
+            <Link to="/" className="link-nav">Comics</Link>
+            <Link to="/category/Marvel" className="link-nav">Marvel</Link>
+            <Link to="/category/DC" className="link-nav">DC</Link>
+            <Link to="/cart"><CartWidget/></Link>
             </Nav>
         </Navbar>
         </div>
