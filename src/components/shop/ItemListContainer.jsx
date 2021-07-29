@@ -2,10 +2,11 @@ import {useState, useEffect} from 'react'
 import ItemCount from '../ItemCount'
 import ItemList from '../ItemList'
 import {useParams} from 'react-router-dom'
-import {getItem} from '../details/getMocks';
+import {getList } from '../ItemList'
 
 
-// import getItems from '../ItemList'
+
+
 
 
 
@@ -18,14 +19,11 @@ function ItemListContainer() {
     useEffect(() => {
         
         if(categoryId === undefined){
-            getItem()
-            .then(resp => setItems)
-        }else{
-            getItem()
+            getList()
             .then(resp => setItems(resp.filter(it => it.categoria === categoryId)))
         }
         
-    }, [])
+    }, [categoryId])
 
     console.log(categoryId);
     return (

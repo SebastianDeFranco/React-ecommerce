@@ -25,7 +25,7 @@ function handleContador(){
           <Route exact path="/">
           <ItemListContainer greeting="Conoce Nuestros Productos" user="Actividad"/>
           </Route>
-          <Route exact path="/category/: categoryId">
+          <Route exact path="/category/:categoryId">
           <ItemListContainer greeting="Conoce Nuestros Productos" user="Actividad"/>
           </Route>
           </Switch>
