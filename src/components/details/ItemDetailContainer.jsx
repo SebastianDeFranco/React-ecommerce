@@ -27,5 +27,5 @@ const ItemDetailContainer = () => {
     </>
     );
 };
-  
-  export default ItemDetailContainer;
+
+export default ItemDetailContainer;

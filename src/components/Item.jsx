@@ -1,22 +1,20 @@
 import React from 'react'
 import {Button, Card} from 'react-bootstrap';
-// import React from "react";
-import { useState, useEffect, useContext, useRef } from 'react';
+import { useState, useContext} from 'react';
 import { Link } from "react-router-dom";
+import cartContext from '../context/cartContext';
 
 
 function Item({item}) {
     
-    // const { list, quantity } = useContext(cartContext);
-    // const [show, setShow] = useState(false);
-    // const element = useRef();
-
-
+    const { list, quantity } = useContext(cartContext);
+    const [show, setShow] = useState(false);
+    
     return (
-        <div className="col-sm-3 mb-4">
+        <div className="col-md-3 col-sm-6 mb-4">
             <Card>
             <Card.Img src={item.img}/>
-            <Card.Body className="d-flex justify-content-between flex-column">
+            <Card.Body className=" col-sm-12 d-flex justify-content-between flex-column">
                 <Card.Title>
                     <h4>{item.title}</h4>
                 </Card.Title>

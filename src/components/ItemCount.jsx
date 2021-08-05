@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const ItemCount = ({ onAdd }) => {
-console.log(onAdd);
+// console.log(onAdd);
 const [contador, setContador] = useState(1);
 
 const incrementar = () => {
