@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Card} from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
 import { useState, useContext} from 'react';
 import { Link } from "react-router-dom";
 import cartContext from '../context/cartContext';
