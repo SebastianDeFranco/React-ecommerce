@@ -1,14 +1,10 @@
 import React from 'react'
 import {Card} from 'react-bootstrap';
-import { useState, useContext} from 'react';
 import { Link } from "react-router-dom";
-import cartContext from '../context/cartContext';
 
 
 function Item({item}) {
     
-    const { list, quantity } = useContext(cartContext);
-    const [show, setShow] = useState(false);
     
     return (
         <div className="col-md-3 col-sm-6 mb-4">

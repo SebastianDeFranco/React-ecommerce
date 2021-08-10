@@ -1,18 +1,18 @@
-import React, { useContext, useState } from "react";
-import cartContext from "./cartContext";
+// import React, { useContext, useState } from "react";
+// import CartContext from "./CartContext";
 
-const CartState = ({ children }) => {
-  const [list, setList] = useState([]);
+// const CartState = ({ children }) => {
+//   const [list, setList] = useState([]);
 
-  return (
-    <cartContext.Provider
-      value={{
-        list,
-        quantity: list.length
-      }}
-    >
-      {children}
-    </cartContext.Provider>
-  );
-};
-export default CartState;
+//   return (
+//     <CartContext.Provider
+//       value={{
+//         list,
+//         quantity: list.length
+//       }}
+//     >
+//       {children}
+//     </CartContext.Provider>
+//   );
+// };
+// export default CartState;

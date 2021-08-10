@@ -5,7 +5,8 @@ import ItemListContainer from './components/shop/ItemListContainer';
 import './components/shop/ItemListContainer.css'
 import ItemDetailContainer from './components/details/ItemDetailContainer';
 import {BrowserRouter as Router, Switch, Route, useParams} from 'react-router-dom';
-import CartState from './context/CartState';
+// import CartState from './context/CartState';
+import UseNotiContext from './context/CartContext';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
   return (
     <Router>
       <div className="body">
-      <CartState>
+      <UseNotiContext>
       <NavBar/>
         <Switch>
           <Route exact path="/">
@@ -22,7 +23,7 @@ function App() {
             <Route exact component={ItemDetailContainer} path="/product/:id" />
             <Route exact component={ItemListContainer} path="/category/:categoryId"/>
           </Switch>
-      </CartState>
+      </UseNotiContext>
       </div>
     </Router>
   );
