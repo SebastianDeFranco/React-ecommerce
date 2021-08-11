@@ -13,7 +13,6 @@ export default function UseNotiContext({children}){
     function guardarItem(newItem){
         console.log(newItem)
         const idx = cartList.findIndex(item => newItem.item.id === item.item.id)//-1 , posicion
-        console.log('index:',idx);
         if(idx === -1){
             setCartList([...cartList,newItem])
         }else{
@@ -30,11 +29,9 @@ export default function UseNotiContext({children}){
     }
 
     const price =()=>{
-        return cartList.reduce((acum, valor)=>(acum + (valor.quantity* valor.item.precio)), 0) //[item.quantity, ]
+        return cartList.reduce((acum, valor)=>(acum + (valor.quantity * valor.item.price)), 0) //[item.quantity, ]
     }
-    const size =()=>{
-        return cartList.reduce((acum, valor)=> acum + valor.quantity, 0) //[item.quantity],0) 
-    }
+
 
     function cleanList (){
         setCartList([])
@@ -45,7 +42,6 @@ export default function UseNotiContext({children}){
             cartList,
             removeItem,
             price,
-            size,
             guardarItem
         }}>
             {children}

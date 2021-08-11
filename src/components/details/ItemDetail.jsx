@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount";
+import { NotiContext } from "../../context/CartContext";
 
 
 const ItemDetail = ({ item }) => {
     const [irCart, setIrCart] = useState(false);
-    console.log(item);
+    // console.log(item);
 
+    const {guardarItem, cartList, price } = useContext(NotiContext)
+    
     const onAdd = (contador) => {
     console.log("Se han seleccionado: " + contador);
     setIrCart(true);
+    guardarItem({item, quantity: contador, price: price})
+
 };
+console.dir(cartList);
 
 return (
     <>

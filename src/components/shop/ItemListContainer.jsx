@@ -26,7 +26,7 @@ export default function ItemListContainer({ greating }) {
 
     return (
         <div className="container" style={{ textAlign: "center" }}>
-            <h1 style={{color:"#fff"}}>{greating}</h1>
+            <h1 style={{fontFamily:"'Architects Daughter', cursive"}}>{greating}</h1>
             {prod.length < 1 ? <img src="/assets/img/oval.svg" /> : <ItemList items={prod} />}
         </div>
     );
