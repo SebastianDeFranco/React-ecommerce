@@ -7,6 +7,7 @@ import { createContext, useState } from "react";
 
 export const NotiContext = createContext()
 
+
 export default function UseNotiContext({children}){
     const [cartList, setCartList] = useState([])
     
@@ -22,6 +23,7 @@ export default function UseNotiContext({children}){
             console.log(oldList);
             setCartList([...oldList,{item: newItem.item, quantity: newQuantity}])
         }//[item1, item2,item3]
+            
     }
 
     const removeItem = (oldItemId) =>{

@@ -14,7 +14,6 @@ const ItemDetail = ({ item }) => {
     console.log("Se han seleccionado: " + contador);
     setIrCart(true);
     guardarItem({item, quantity: contador, price: price})
-
 };
 console.dir(cartList);
 

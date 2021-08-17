@@ -7,6 +7,7 @@ import ItemDetailContainer from './components/details/ItemDetailContainer';
 import {BrowserRouter as Router, Switch, Route, useParams} from 'react-router-dom';
 // import CartState from './context/CartState';
 import UseNotiContext from './context/CartContext';
+// import  CartProvider  from './context/CartContext';
 import Cart from './components/cart';
 
 
