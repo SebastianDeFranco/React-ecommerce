@@ -62,17 +62,20 @@ function Cart() {
 
     const order= {buyer, item: listaItem}
 
-    const handlerChange =(e)=>{
-        setBuyer({
-            ...order,
-            [e.target.name] : e.target.value
-        })
-    }
+    // const handlerChange =(e)=>{
+    //     setBuyer({
+    //         ...order,
+    //         [e.target.name] : e.target.value
+    //     })
+    // }
 
     const handlerSubmit = (e)=>{
         e.preventDefault()
         const db = getFirestore()
         db.collection('order').add(order)
+        // db.collection('order').doc('CZjolUV0XAdTtLr6z9L1').update({
+        //     item:[]
+        // })
         .then(resp => console.log(resp))
         .catch(err => console.log(err))
         .finally(()=>{setLoading(false)})
@@ -105,7 +108,7 @@ function Cart() {
 
                     <form 
                     onSubmit={handlerSubmit}
-                    onChange={handlerChange}
+                    // onChange={handlerChange}
                     >
                         <input 
                         type="texto" 
